@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 228 84% 5%;
+    --foreground: 210 40% 92%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 92%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 92%;
+
+    --primary: 187 94% 43%;
+    --primary-foreground: 228 84% 5%;
+
+    --secondary: 258 90% 66%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 30% 15%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 220 30% 15%;
+    --accent-foreground: 210 40% 92%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 160 84% 39%;
+    --success-foreground: 210 40% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 228 84% 5%;
+
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 187 94% 43%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 228 84% 4%;
+    --sidebar-foreground: 210 40% 80%;
+    --sidebar-primary: 187 94% 43%;
+    --sidebar-primary-foreground: 228 84% 5%;
+    --sidebar-accent: 220 30% 12%;
+    --sidebar-accent-foreground: 210 40% 92%;
+    --sidebar-border: 220 30% 14%;
+    --sidebar-ring: 187 94% 43%;
+
+    --chart-1: 187 94% 43%;
+    --chart-2: 258 90% 66%;
+    --chart-3: 160 84% 39%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 0 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 shadow-lg shadow-black/20;
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px hsl(187 94% 43% / 0.15), 0 0 60px hsl(187 94% 43% / 0.05);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px hsl(258 90% 66% / 0.15), 0 0 60px hsl(258 90% 66% / 0.05);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+}
